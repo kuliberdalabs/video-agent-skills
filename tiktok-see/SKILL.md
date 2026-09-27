@@ -29,7 +29,7 @@ analysis only. `TIKTOK_SEE_MODEL` selects the transcription model.
 |---|---|---|
 | `quick` | transcript, `cuts.txt`, `soft_cuts.txt`, `contact.png` | Locate spoken and visual moments. |
 | `standard` (default) | Quick outputs plus full-resolution `exact/` frames, labelled `exact-*.png` sheets, and `exact.tsv` | Inspect transitions and important visible details. |
-| `deep` | Standard outputs plus shot-start frames, 2 fps `filmstrip-*.png`, `waveform.png`, and `shots.tsv` | Study editing rhythm and align short shots with speech. |
+| `deep` | Standard outputs plus shot-start frames, 2 fps `filmstrip-*.png`, `waveform.png` (when the file has audio), and `shots.tsv` | Study editing rhythm and align short shots with speech. |
 
 For a video over 180 seconds, deep skips the filmstrip unless `--window START-END` is provided.
 The window limits exact frames, the filmstrip, and shot rows; the transcript and cut passes still
