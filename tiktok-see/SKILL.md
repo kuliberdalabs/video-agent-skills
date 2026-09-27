@@ -17,7 +17,7 @@ bash tiktok-see/tiktok_see.sh <public-url-or-local-file> [output-directory] [--d
 
 Run from the repository root or use the script's full path. Output defaults to
 `./video-see-output`; give each reference its own directory. A local file needs no network access.
-Public URLs use `yt-dlp` with its configuration disabled. URL retrieval requires `yt-dlp`; local
+Public URLs use `yt-dlp` with its configuration disabled to fetch a working copy for local analysis only; keep it private, delete it when done, and follow the platform's terms. URL retrieval requires `yt-dlp`; local
 analysis requires FFmpeg. Python 3 with NumPy and Pillow enables transition candidates, timecoded
 sheets, and exact frames. Set `TIKTOK_SEE_PYTHON` to select that Python executable. Audio
 transcription uses local `mlx_whisper` when available; set `TIKTOK_SEE_TRANSCRIBE=0` for visual

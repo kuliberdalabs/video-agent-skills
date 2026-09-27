@@ -30,7 +30,7 @@ bash video-audit/video_audit.sh post ./example.mp4 ./video-audit-output
 
 Run `bash <script> --help` for command usage. Local-file operation does not require network access.
 The `tiktok-see` output directory contains `contact.png`, `cuts.txt`, and `soft_cuts.txt`. Standard
-mode adds `exact/` frames and labelled sheets; deep mode adds a filmstrip, waveform, and `shots.tsv`.
+mode adds `exact/` frames and labelled sheets; deep mode adds `shots.tsv`, a waveform when the file has audio, and a filmstrip for videos up to 180 s (longer videos need `--window`).
 Speech output is written to `transcript.txt`, `.srt`, and `.json` when recognition succeeds.
 Transition lists are candidates to verify against frames before drawing editing conclusions.
 

@@ -37,11 +37,11 @@ if [[ -n "$PY" ]] && "$PY" -c 'import numpy, PIL' >/dev/null 2>&1; then HAVE_PY=
 # ---------- fetch ----------
 if [[ "$SRC" =~ ^https?:// ]]; then
   if ! command -v yt-dlp >/dev/null 2>&1; then
-    echo "ERROR: yt-dlp not installed. Download the file yourself and pass its path."; exit 1
+    echo "ERROR: yt-dlp not installed. Install it, or pass a local video file you are allowed to use."; exit 1
   fi
   rm -f "$OUT"/video.* 2>/dev/null
   LOG="$OUT/download.log"; : > "$LOG"
-  echo "fetching public URL via yt-dlp (log: $LOG)"
+  echo "fetching a working copy for local analysis via yt-dlp (log: $LOG); do not redistribute it"
   if yt-dlp --ignore-config --no-playlist --no-progress -S "res:1080,ext:mp4:m4a" --merge-output-format mp4 \
        -o "$OUT/video.%(ext)s" "$SRC" >>"$LOG" 2>&1; then
     echo "fetch: ok"
